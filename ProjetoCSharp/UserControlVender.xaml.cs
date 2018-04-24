@@ -22,7 +22,8 @@ namespace ProjetoCSharp
     /// </summary>
     public partial class UserControlVender : UserControl
     {
-        static List<Livro> lLivrosChecked = new List<Livro>();
+        List<Livro> lLivrosChecked = new List<Livro>();
+
 
         public UserControlVender()
         {
@@ -43,33 +44,42 @@ namespace ProjetoCSharp
         {
 
             CheckBox chk = (CheckBox)sender;
-            MessageBox.Show(chk.Tag.ToString());
 
             LivroController lvc = new LivroController();
-
             lLivrosChecked.Add(lvc.ProcurarLivro(int.Parse(chk.Tag.ToString())));
-
         }
 
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
             CheckBox chk = (CheckBox)sender;
-            MessageBox.Show(chk.Tag.ToString());
 
             LivroController lvc = new LivroController();
 
-            lLivrosChecked.Remove(lvc.ProcurarLivro(int.Parse(chk.Tag.ToString())));
+            lLivrosChecked.RemoveAll(l => l.LivroID == int.Parse(chk.Tag.ToString()));
         }
 
         private void btnVender_Click(object sender, RoutedEventArgs e)
         {
-            int total = 0;
-
-            foreach (var livro in lLivrosChecked)
+            Venda v = new Venda();
+            if (lLivrosChecked.Count != 0)
             {
-                total += livro.valorLivro;
+                for (int i = 0; i < lLivrosChecked.Count; i++)
+                {
+                    v.ItemVenda.Add(new ItemVenda {LivroID = lLivrosChecked[i].LivroID, ItemVendaValor = lLivrosChecked[i].LivroValor});
+                    
+                }
+                VendaController vc = new VendaController();
+                vc.CadastrarVenda(v);
+
+                MessageBox.Show("Venda realizada!");
+                listLivros.Items.Refresh();
+
             }
-            MessageBox.Show(total.ToString());
+            else
+            {
+                MessageBox.Show("Nenhum livro selecionado, selecione pelo menos um livro!!!");
+            }
+            
         }
     }
 }

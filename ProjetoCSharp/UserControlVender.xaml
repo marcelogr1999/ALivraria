@@ -5,20 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjetoCSharp"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+             d:DesignHeight="600" d:DesignWidth="800" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Top" Height="689" Width="841">
     <Grid>
-        <Grid Background="#FFFFA200" Width="376" HorizontalAlignment="Center" VerticalAlignment="Center" Height="335">
+        <Grid Background="#E65100" Width="843" HorizontalAlignment="Center" VerticalAlignment="Center" Height="640" >
 
-            <ListBox Name="listLivros" ItemsSource="{Binding lLivros}" SelectedItem="{Binding nomeLivro}">
+            <ListBox Name="listLivros" Foreground="NavajoWhite" ItemsSource="{Binding lLivros}" SelectedItem="{Binding LivroNome}" Width="843" Height="629" FontSize="24" Margin="0,-1,0,1">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox Tag="{Binding idLivro}" Content="{Binding nomeLivro}" IsChecked="{Binding IsSelected}" Background="Black" Foreground="Black" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                        <CheckBox Tag="{Binding LivroID}" Name="cbLivros" Content="{Binding LivroNome}" IsChecked="{Binding IsSelected}" Background="Black" Foreground="Black" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Button x:Name="btnVender" Content="Vender" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF898080" Style="{DynamicResource btnTerminal}" Click="btnVender_Click" Height="87" Margin="100,358,88,-110" FontSize="32"/>
 
 
         </Grid>
+        <Button x:Name="btnVender" Content="Vender" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Style="{DynamicResource btnTerminal}" Click="btnVender_Click" Margin="117,640,71,-44" FontSize="32"/>
     </Grid>
 </UserControl>

@@ -8,15 +8,25 @@ namespace Modelos
 {
     public class Livro
     {
-        public string nomeLivro { get; set; }
+        public int LivroID { get; set; }
 
-        public string cod { get; set; }
+        public string LivroNome { get; set; }
 
-        public int idLivro { get; set; }
+        public int LivroValor { get; set; }
 
-        public int livroIdGenero { get; set; }
+        public string LivroCod { get; set; }       
 
-        public int valorLivro{ get; set; }
+        public string LivroDescricao { get; set; }
+        
+        public int GeneroID { get; set; }
+
+        public Genero _Genero { get; set; }
+
+        //public Livro()
+        //{
+        //    _Genero = new Genero();
+        //}
 
     }
+
 }

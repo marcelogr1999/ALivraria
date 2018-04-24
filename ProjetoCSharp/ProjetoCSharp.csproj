@@ -69,6 +69,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TelaDetalhesEditar.xaml.cs">
+      <DependentUpon>TelaDetalhesEditar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TelaDetalhesVenda.xaml.cs">
+      <DependentUpon>TelaDetalhesVenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TelaTerminal.xaml.cs">
+      <DependentUpon>TelaTerminal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TelaUsuario.xaml.cs">
       <DependentUpon>TelaUsuario.xaml</DependentUpon>
     </Compile>
@@ -80,6 +89,9 @@
     </Compile>
     <Compile Include="UserControlListar.xaml.cs">
       <DependentUpon>UserControlListar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlListarVenda.xaml.cs">
+      <DependentUpon>UserControlListarVenda.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlVender.xaml.cs">
       <DependentUpon>UserControlVender.xaml</DependentUpon>
@@ -96,6 +108,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="TelaDetalhesEditar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TelaDetalhesVenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TelaTerminal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TelaUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlListar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlListarVenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

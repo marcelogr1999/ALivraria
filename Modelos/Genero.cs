@@ -8,7 +8,7 @@ namespace Modelos
 {
     public class Genero
     {
-        public string nomeGenero { get; set; }
-        public int idGenero { get; set; }
+        public int GeneroID { get; set; }
+        public string GeneroNome{ get; set; }
     }
 }

@@ -23,8 +23,11 @@ namespace ProjetoCSharp
     /// </summary>
     public partial class UserControlListar : UserControl
     {
-        public UserControlListar()
+        Boolean esc = new Boolean();
+
+        public UserControlListar(Boolean abc)
         {
+            esc = abc;
             InitializeComponent();
             objetosLista();
         }
@@ -34,8 +37,18 @@ namespace ProjetoCSharp
             LivroController lvc = new LivroController();
             List<Livro> lLivros = new List<Livro>();
 
-            lLivros = lvc.ListaLivros();
+            lLivros = lvc.ListaLivrosGeneros();
             listLivros.ItemsSource = lLivros;
+        }
+
+        private void listLivros_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (esc)
+            {
+                TelaDetalhesEditar tde = new TelaDetalhesEditar(int.Parse(listLivros.SelectedValue.ToString()));
+                tde.ShowDialog();
+                objetosLista();
+            }
         }
     }
 }

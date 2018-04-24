@@ -8,10 +8,11 @@ namespace Modelos
 {
     public class Usuario
     {
+        public int UsuarioID { get; set; }
 
-        public string nomeUsuario { get; set; }
+        public string UsuarioNome { get; set; }
 
-        public string senha { get; set; }
+        public string UsuarioSenha { get; set; }
     }
 
 }

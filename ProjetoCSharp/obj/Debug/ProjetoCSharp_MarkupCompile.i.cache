@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\App.xaml
-7627095957
+1121661178
 
-14-862099419
+18-258274554
 22-1476517511
-MainWindow.xaml;TelaUsuario.xaml;Themes.xaml;UserControlCadastrarGenero.xaml;UserControlCadastrarLivro.xaml;UserControlListar.xaml;UserControlVender.xaml;
+MainWindow.xaml;TelaDetalhesEditar.xaml;TelaDetalhesVenda.xaml;TelaTerminal.xaml;TelaUsuario.xaml;Themes.xaml;UserControlCadastrarGenero.xaml;UserControlCadastrarLivro.xaml;UserControlListar.xaml;UserControlListarVenda.xaml;UserControlVender.xaml;
 
 False
 

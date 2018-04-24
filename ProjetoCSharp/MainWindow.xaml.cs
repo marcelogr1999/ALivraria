@@ -30,14 +30,16 @@ namespace ProjetoCSharp
         public MainWindow()
         {
             InitializeComponent();
+            this.boxNome.Focus();
             InicializarGenero();
             InicializarLivro();
+            InicializarUsuario();
         }
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
             nome = boxNome.Text;
-            senha = boxSenha.Text;
+            senha = boxSenha.Password;
 
             UsuarioController uc = new UsuarioController();
 
@@ -60,28 +62,51 @@ namespace ProjetoCSharp
         private void InicializarLivro()
         {
             LivroController lvc = new LivroController();
-
-            Livro teste = new Livro();
-
-            teste.nomeLivro = "Tartaruga";
-            teste.cod = "100";
-            teste.livroIdGenero = 1;
-            teste.valorLivro = 40;
-            lvc.CadastrarLivro(teste);
+            if (lvc.ListaLivros().Count==0)
+            {
+                Livro teste = new Livro();
+                teste.LivroNome = "TARTARUGA";
+                teste.LivroCod = "100";
+                teste.GeneroID = 1;
+                teste.LivroDescricao = "A história da tartaruga que se perdeu";
+                //teste._Genero = gc.ProcurarGenero(1);
+                teste.LivroValor = 40;
+                lvc.CadastrarLivro(teste);
+            }
         }
 
         private void InicializarGenero()
         {
             GeneroController gc = new GeneroController();
-
-            Genero teste = new Genero();
-
-            teste.nomeGenero = "Terror";
-
-            gc.CadastrarGenero(teste);
+            if (gc.ListaGeneros().Count==0)
+            {
+                Genero teste = new Genero();
+                teste.GeneroNome = "TERROR";
+                gc.CadastrarGenero(teste);
+            }
         }
 
-     
+        private void InicializarUsuario()
+        {
+            UsuarioController uc = new UsuarioController();
+            if(uc.ListaUsuario()==null)
+            {
+                Usuario usuario = new Usuario();
+
+                usuario.UsuarioNome = "usuariopadrao";
+                usuario.UsuarioSenha = "livraria";
+                uc.CadastrarUsuario(usuario);
+
+            }
+        }
+
+        private void btnTerminal_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            TelaTerminal tt = new TelaTerminal();
+            tt.Show();
+
+        }
     }
         
 }

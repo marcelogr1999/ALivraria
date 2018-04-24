@@ -26,29 +26,54 @@ namespace ProjetoCSharp
         {
             InitializeComponent();
             objetosLista();
+            Loaded += UserControlCadastrarLivro_Loaded;
         }
 
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            if ((boxNomeLivro.Text.Equals("")) || (boxCod.Text.Equals("") || (boxValor.Text.Equals("")) || (listGeneros.SelectedValue==null)))
+            if ((boxNomeLivro.Text.Equals("")) || (boxCod.Text.Equals("") || (boxValor.Text.Equals("")) || 
+            (listGeneros.SelectedValue==null) || (boxDescricao.Text.Equals(""))))
             {
                 MessageBox.Show("Dados incompletos!!!");
             }
             else
             {
-                Livro l = new Livro();
-                LivroController lvc = new LivroController();
-                l.nomeLivro = boxNomeLivro.Text;
-                l.cod = boxCod.Text;
-                l.valorLivro = int.Parse(boxValor.Text);
-                l.livroIdGenero = int.Parse(listGeneros.SelectedValue.ToString());     
+                try
+                {
+                    Livro l = new Livro();
+                    LivroController lvc = new LivroController();
+                    GeneroController gc = new GeneroController();
+                    l.LivroValor = int.Parse(boxValor.Text);
+                    l.LivroCod = boxCod.Text;
+                    l.LivroNome = boxNomeLivro.Text.ToUpper();
+                    l.LivroDescricao = boxDescricao.Text;
+                    int pesquisa = int.Parse(listGeneros.SelectedValue.ToString());
+                    //MessageBox.Show(pesquisa.ToString());
+                    l.GeneroID = pesquisa;
+                    //l._Genero = gc.ProcurarGenero(pesquisa);
 
-                lvc.CadastrarLivro(l);
+                    if (lvc.ProcurarLivroPorNome(l.LivroNome, 0))
+                    {
+                        MessageBox.Show("Esse livro já foi cadastrado!!!");
+                    }
+                    else
+                    {
+                        lvc.CadastrarLivro(l);
+                        MessageBox.Show("Cadastrado com sucesso!!!");
 
-                MessageBox.Show("Cadastrado com sucesso!!!");
+                    }
+                    listGeneros.SelectedIndex = -1;
+                    boxNomeLivro.Text = string.Empty;
+                    boxCod.Text = string.Empty;
+                    boxValor.Text = string.Empty;
+                    boxDescricao.Text = string.Empty;
+                    boxNomeLivro.Focus();
+                }
+                catch (System.FormatException)
+                {
 
-                boxNomeLivro.Text = string.Empty;
-                boxCod.Text = string.Empty;
+                    MessageBox.Show("Dado informado no formato incorreto!!!");
+                }
             }
         }
 
@@ -59,6 +84,11 @@ namespace ProjetoCSharp
 
             lGeneros = gc.ListaGeneros();
             listGeneros.ItemsSource = lGeneros;
+        }
+
+        private void UserControlCadastrarLivro_Loaded(object sender, RoutedEventArgs e)
+        {
+            boxNomeLivro.Focus();
         }
 
 

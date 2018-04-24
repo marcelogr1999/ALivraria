@@ -5,21 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjetoCSharp"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="800" Loaded="UserControlCadastrarGenero_Loaded">
     <Grid>
         <Grid Width="800" Height="600">
-            <TextBox x:Name="boxNomeGenero"  HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="344,246,0,0" Foreground="#FFFF9800"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nome do Gênero:" VerticalAlignment="Top" Margin="136,254,0,0" FontSize="24">
+            <TextBox x:Name="boxNomeGenero" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="283,164,0,0" Foreground="#FFFF9800"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nome do Gênero:" VerticalAlignment="Top" Margin="64,164,0,0" FontSize="24">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{DynamicResource txtColor}"/>
                 </TextBlock.Foreground>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CADASTRO DO GÊNERO" VerticalAlignment="Top" FontSize="40" FontWeight="Bold" Margin="164,114,0,0" Height="76" Width="472">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CADASTRO DO GÊNERO" VerticalAlignment="Top" FontSize="40" FontWeight="Bold" Margin="64,75,0,0" Height="76" Width="472">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{DynamicResource txtColor}"/>
                 </TextBlock.Foreground>
             </TextBlock>
-            <Button x:Name="btnCadastrar" Content="Cadastrar" VerticalAlignment="Top" FontSize="32" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF898080" Style="{DynamicResource btnTerminal}" Margin="378,342,0,0" Click="btnCadastrar_Click"/>
+            <Button x:Name="btnCadastrar" IsDefault="True" Content="Cadastrar" VerticalAlignment="Top" FontSize="32" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF898080" Style="{DynamicResource btnTerminal}" Margin="614,524,0,0" Click="btnCadastrar_Click"/>
         </Grid>
     </Grid>
 </UserControl>

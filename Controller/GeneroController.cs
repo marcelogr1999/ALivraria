@@ -4,42 +4,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Modelos;
+using Modelos.DAL;
 
 namespace Controller
 {
     public class GeneroController
     {
-        static List<Genero> MeusGeneros = new List<Genero>();
-        static int ultimoIdGenero = 0;
-
         public void CadastrarGenero(Genero novoGenero)
         {
-            int idGenero = 0;
-            idGenero = ultimoIdGenero + 1;
-            ultimoIdGenero = idGenero;
 
-            novoGenero.idGenero = idGenero;
-            MeusGeneros.Add(novoGenero);
+            Contexto ctx = new Contexto();
+
+
+            ctx.Generos.Add(novoGenero);
+            ctx.SaveChanges();
         }
 
         public Genero ProcurarGenero(int id)
         {
-            Genero g = new Genero();
+            Contexto ctx = new Contexto();
 
-            foreach (var genero in MeusGeneros)
-            {
-                if (id==genero.idGenero)
-                {
-                    g = genero;
-                    return genero;
-                }
-            }
+            //var l = from x in ctx.Livros
+            //        where x.LivroID == id
+            //        select x;
 
-            return null;
+            return ctx.Generos.Find(id);
         }
+
+        public Boolean ProcurarGeneroPorNome(string nome)
+        {
+        
+            Contexto ctx = new Contexto();
+            Genero g = ctx.Generos.Where(gen => gen.GeneroNome == nome).FirstOrDefault();
+            if (g != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         public List<Genero> ListaGeneros()
         {
-            return MeusGeneros;
+            Contexto ctx = new Contexto();
+
+            return ctx.Generos.ToList();
         }
     }
 }

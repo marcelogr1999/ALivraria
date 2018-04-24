@@ -3,55 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:ProjetoCSharp"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800" HorizontalAlignment="Center" VerticalAlignment="Center">
+             d:DesignHeight="600" d:DesignWidth="800" HorizontalAlignment="Center" VerticalAlignment="Center" Loaded="UserControlCadastrarLivro_Loaded">
 
     <Grid Width="800" Height="600">
-        <TextBox x:Name="boxNomeLivro"  HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="344,246,0,0" Foreground="#FFFF9800"/>
-        <TextBox x:Name="boxCod" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="344,367,0,0">
-            <TextBox.Foreground>
-                <SolidColorBrush Color="{DynamicResource Orange}"/>
-            </TextBox.Foreground>
-        </TextBox>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nome do Livro:" VerticalAlignment="Top" Margin="164,254,0,0" FontSize="24">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{DynamicResource txtColor}"/>
-            </TextBlock.Foreground>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="152,375,0,0" FontSize="24">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{DynamicResource txtColor}"/>
-            </TextBlock.Foreground><Run Text="Código do Livro"/><Run Text=":"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CADASTRO DO LIVRO" VerticalAlignment="Top" FontSize="40" FontWeight="Bold" Margin="164,114,0,0" Height="76" Width="472">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{DynamicResource txtColor}"/>
-            </TextBlock.Foreground>
-        </TextBlock>
-        <Button x:Name="btnCadastrar" Content="Cadastrar" VerticalAlignment="Top" FontSize="32" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF898080" Style="{DynamicResource btnTerminal}" Margin="632,420,0,0" Click="btnCadastrar_Click"/>
+        <TextBox x:Name="boxNomeLivro"  HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="256,156,0,0" Foreground="#FFFF9800"/>
 
-        <ComboBox Name="listGeneros" ItemsSource="{Binding lGeneros}" 
+        <ComboBox Name="listGeneros" ItemsSource="{Binding lGeneros}" materialDesign:HintAssist.Hint="- - - - - - - - - - - - "
           SelectedValue="{Binding nomeGenero, Mode=TwoWay}" 
-          SelectedValuePath="idGenero"
-          DisplayMemberPath="nomeGenero" SelectedIndex="0"
-          Margin="344,323,250,249" HorizontalContentAlignment="Center">
+          SelectedValuePath="GeneroID"
+          DisplayMemberPath="GeneroNome"
+          Margin="256,227,338,326" FontSize="24" HorizontalContentAlignment="Left" Height="47">
             <ComboBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource Orange}"/>
             </ComboBox.Foreground>
         </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="244,315,0,0" FontSize="24" Text="Gênero:">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{DynamicResource txtColor}"/>
-            </TextBlock.Foreground></TextBlock>
-        <TextBox x:Name="boxValor" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="344,427,0,0">
+        <TextBox x:Name="boxCod" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="256,297,0,0">
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource Orange}"/>
             </TextBox.Foreground>
         </TextBox>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="268,435,0,0" FontSize="24" Text="Valor:">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nome do Livro:" VerticalAlignment="Top" Margin="76,164,0,0" FontSize="24">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource txtColor}"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="64,298,0,0" FontSize="24">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource txtColor}"/>
+            </TextBlock.Foreground><Run Text="Código do Livro"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CADASTRO DO LIVRO" VerticalAlignment="Top" FontSize="40" FontWeight="Bold" Margin="64,75,0,0" Height="76" Width="472">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource txtColor}"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="156,231,0,0" FontSize="24" Text="Gênero:">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{DynamicResource txtColor}"/>
             </TextBlock.Foreground></TextBlock>
+        <TextBox x:Name="boxValor" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Margin="256,357,0,0">
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource Orange}"/>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="180,365,0,0" FontSize="24" Text="Valor:">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource txtColor}"/>
+            </TextBlock.Foreground></TextBlock>
+        <TextBox x:Name="boxDescricao" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="480" FontSize="24" Margin="256,432,0,0" MaxLength="38">
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource Orange}"/>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="131,432,0,0" FontSize="24" Text="Descrição:">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource txtColor}"/>
+            </TextBlock.Foreground></TextBlock>
+
+        <Button x:Name="btnCadastrar" Content="Cadastrar" IsDefault="True" VerticalAlignment="Top" FontSize="32" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF898080" Style="{DynamicResource btnTerminal}" Margin="614,524,0,0" Click="btnCadastrar_Click"/>
+
     </Grid>
 </UserControl>

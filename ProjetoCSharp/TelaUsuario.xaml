@@ -7,37 +7,43 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Controle do Usuário" Height="720" Width="1024" MinHeight="720" MinWidth="1024" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" SizeToContent="WidthAndHeight" 
-        ResizeMode="CanResizeWithGrip" WindowState="Maximized">
+        ResizeMode="CanMinimize" Closed="Window_Closed" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
     <Grid>
 
         <Grid.Background>
             <SolidColorBrush Color="{DynamicResource bkgColor}"/>
         </Grid.Background>
 
-        <Image Margin="11,3,0,544" HorizontalAlignment="Left" Width="130">
+        <Image Margin="23,3,0,544" HorizontalAlignment="Left" Width="130">
             <Image.Source>
                 <BitmapImage UriSource="/img/open-book.png" />
             </Image.Source>
         </Image>
 
-        <Grid x:Name="gridConteudo" HorizontalAlignment="Left" Height="689" Margin="191,0,0,0" VerticalAlignment="Top" Width="825"/>
+        <Grid x:Name="gridConteudo" HorizontalAlignment="Left" Height="691" Margin="175,0,0,0" VerticalAlignment="Top" Width="843" />
         <Grid Width="175" HorizontalAlignment="Left">
 
             <materialDesign:TransitioningContent x:Name="TransitioningContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.2}">
-                <Grid x:Name="GridCursor" Margin="0,151,0,0" Background="#FFFF9800" Width="5" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top"/>
+                <Grid x:Name="GridCursor" Margin="0,151,0,0" Background="#FFFF9800" Width="5" HorizontalAlignment="Left" Height="39" VerticalAlignment="Top"/>
             </materialDesign:TransitioningContent>
-            <ListView x:Name="ListViewMenu" HorizontalAlignment="Left" Height="414" Margin="5,151,-20,0" VerticalAlignment="Top" Width="170" SelectionChanged="ListViewMenu_SelectionChanged" BorderBrush="#89000000" Background="#FF252121" Foreground="{x:Null}" BorderThickness="0" Style="{DynamicResource ListViewStyle1}" SelectedIndex="0">
+            <ListView x:Name="ListViewMenu" HorizontalAlignment="Left" Height="540" Margin="5,151,0,0" VerticalAlignment="Top" Width="170" SelectionChanged="ListViewMenu_SelectionChanged" BorderBrush="#89000000" Foreground="{x:Null}" BorderThickness="0" Style="{DynamicResource ListViewStyle1}" SelectedIndex="0">
+                <ListView.Background>
+                    <SolidColorBrush Color="#FF252121"/>
+                </ListView.Background>
                 <ListViewItem Height="40" FontSize="15" Style="{DynamicResource ListViewItemStyle1}" BorderThickness="0,0,0,1" Background="Transparent" BorderBrush="Transparent" VerticalContentAlignment="Center">
                     <TextBlock Margin="20 0" Text="Cadastrar Livro" Foreground="LightGray"/>
-                </ListViewItem>
-                <ListViewItem Height="40"  FontSize="15" Style="{DynamicResource ListViewItemStyle1}" BorderThickness="0,0,0,1" BorderBrush="Transparent" Background="Transparent">
-                    <TextBlock Margin="20 0" Text="Listar" Foreground="LightGray"/>
                 </ListViewItem>
                 <ListViewItem Height="40"  FontSize="15" Style="{DynamicResource ListViewItemStyle1}" BorderThickness="0,0,0,1" BorderBrush="Transparent" Background="Transparent">
                     <TextBlock Margin="20 0" Text="Cadastrar Gênero" Foreground="LightGray" Width="122"/>
                 </ListViewItem>
                 <ListViewItem Height="40"  FontSize="15" Style="{DynamicResource ListViewItemStyle1}" BorderThickness="0,0,0,1" BorderBrush="Transparent" Background="Transparent">
+                    <TextBlock Margin="20 0" Text="Listar Livros" Foreground="LightGray"/>
+                </ListViewItem>
+                <ListViewItem Height="40"  FontSize="15" Style="{DynamicResource ListViewItemStyle1}" BorderThickness="0,0,0,1" BorderBrush="Transparent" Background="Transparent">
                     <TextBlock Margin="20 0" Text="Vender" Foreground="LightGray" Width="122"/>
+                </ListViewItem>
+                <ListViewItem Height="40"  FontSize="15" Style="{DynamicResource ListViewItemStyle1}" BorderThickness="0,0,0,1" BorderBrush="Transparent" Background="Transparent">
+                    <TextBlock Margin="20 0" Text="Listar Vendas" Foreground="LightGray" Width="122"/>
                 </ListViewItem>
             </ListView>
         </Grid>

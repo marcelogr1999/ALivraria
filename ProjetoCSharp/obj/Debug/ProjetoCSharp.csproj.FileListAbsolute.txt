@@ -40,3 +40,61 @@ C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\bin\Debug\E
 C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\UserControlVender.g.cs
 C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\UserControlVender.baml
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\UserControlListarVenda.g.cs
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\UserControlListarVenda.baml
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\TelaTerminal.g.cs
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\TelaTerminal.baml
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\TelaDetalhesEditar.g.cs
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\TelaDetalhesEditar.baml
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\TelaDetalhesVenda.g.cs
+C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\TelaDetalhesVenda.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\ProjetoCSharp.exe.config
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\ProjetoCSharp.exe
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\ProjetoCSharp.pdb
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\Controller.dll
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\EntityFramework.dll
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\MaterialDesignColors.dll
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\Modelos.dll
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\Controller.pdb
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\Controller.dll.config
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\Modelos.pdb
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\Modelos.dll.config
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\EntityFramework.xml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\MaterialDesignColors.pdb
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp.csprojResolveAssemblyReference.cache
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\MainWindow.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaDetalhesEditar.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaDetalhesVenda.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaTerminal.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaUsuario.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlCadastrarGenero.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlCadastrarLivro.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlListar.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlListarVenda.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlVender.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\App.g.cs
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp_MarkupCompile.cache
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp_MarkupCompile.lref
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\App.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\MainWindow.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaDetalhesEditar.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaDetalhesVenda.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaTerminal.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\TelaUsuario.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\Themes.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlCadastrarGenero.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlCadastrarLivro.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlListar.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlListarVenda.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\UserControlVender.baml
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp.g.resources
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp.Properties.Resources.resources
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp.csproj.GenerateResource.Cache
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp.csproj.CoreCompileInputs.cache
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp.exe
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\ProjetoCSharp.pdb

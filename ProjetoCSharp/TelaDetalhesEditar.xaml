@@ -1,0 +1,39 @@
+﻿<Window x:Class="ProjetoCSharp.TelaDetalhesEditar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoCSharp"
+        mc:Ignorable="d"
+        Title="Detalhes" Height="540" Width="769"
+        ResizeMode="NoResize" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Loaded="TelaDetalhesEditar_Loaded" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource bkgColor}"/>
+        </Grid.Background>
+        <TextBox x:Name="boxNomeLivro" IsEnabled="False" HorizontalAlignment="Left" Height="48" Margin="102,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="24" Foreground="Gray"/>
+        <TextBox x:Name="boxCod" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="472,83,0,0" VerticalAlignment="Top" Width="225" FontSize="24" Foreground="Gray" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+
+        <ComboBox Name="listGeneros" ItemsSource="{Binding lGeneros}" IsEnabled="False"
+          SelectedValuePath="GeneroID"
+          DisplayMemberPath="GeneroNome"
+          Margin="114,156,438,306" FontSize="24" HorizontalContentAlignment="Left" Height="47">
+            <ComboBox.Foreground>
+                <SolidColorBrush Color="Gray"/>
+            </ComboBox.Foreground>
+        </ComboBox>
+
+        <TextBox x:Name="boxValor" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="482,148,0,0" VerticalAlignment="Top" Width="206" FontSize="24" Foreground="Gray"/>
+        <TextBox x:Name="boxDescricao" IsEnabled="False" HorizontalAlignment="Left" Height="48" Margin="139,274,0,0" VerticalAlignment="Top" Width="421" FontSize="24" Foreground="Gray" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" MaxLength="38" TextAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Left"  Margin="23,158,0,0" TextWrapping="Wrap" Text="Gênero:" VerticalAlignment="Top" FontSize="24" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,85,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top" FontSize="24" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="415,85,0,0" TextWrapping="Wrap" Text="Cod:" VerticalAlignment="Top" FontSize="24" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="415,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="White" Width="67" Height="40"><Run Text="Valor:"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="23,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="White" Width="115" Height="40"><Run Text="Descri"/><Run Text="ção"/><Run Text=":"/><LineBreak/></TextBlock>
+
+        <Button x:Name="btnEditar" IsDefault="True"  Content="Editar" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF898080" Style="{DynamicResource btnTerminal}" Margin="12,433,642,26" FontSize="32" Click="btnEditar_Click"/>
+        <Button x:Name="btnSalvar" Visibility="Hidden" Content="Salvar&#xD;&#xA;" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF898080" Style="{DynamicResource btnTerminal}" Margin="569,435,85,24" FontSize="32" Click="btnSalvar_Click"/>
+
+    </Grid>
+</Window>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\obj\Debug\
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\obj\Debug\
 ProjetoCSharp
 none
 false
 DEBUG;TRACE
-C:\Users\celin\Documents\O Projeto de C#\ProjetoCSharp\ProjetoCSharp\App.xaml
-7627095957
+C:\Users\celin\Documents\ProjetoCS\ProjetoCSharp\App.xaml
+1121661178
 
-10-488807394
-22-1476517511
-MainWindow.xaml;TelaUsuario.xaml;Themes.xaml;UserControlCadastrarGenero.xaml;UserControlCadastrarLivro.xaml;UserControlListar.xaml;UserControlVender.xaml;
+14115017471
+221537584622
+MainWindow.xaml;TelaDetalhesEditar.xaml;TelaDetalhesVenda.xaml;TelaTerminal.xaml;TelaUsuario.xaml;Themes.xaml;UserControlCadastrarGenero.xaml;UserControlCadastrarLivro.xaml;UserControlListar.xaml;UserControlListarVenda.xaml;UserControlVender.xaml;
 
 False
 

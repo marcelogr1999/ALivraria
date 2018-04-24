@@ -25,6 +25,8 @@ namespace ProjetoCSharp
         public UserControlCadastrarGenero()
         {
             InitializeComponent();
+            Loaded += UserControlCadastrarGenero_Loaded;
+
         }
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
@@ -34,17 +36,27 @@ namespace ProjetoCSharp
             }
             else
             {
+                
                 Genero g = new Genero();
-                g.nomeGenero = boxNomeGenero.Text;
-
+                g.GeneroNome = boxNomeGenero.Text.ToUpper();
                 GeneroController gc = new GeneroController();
+                if (gc.ProcurarGeneroPorNome(g.GeneroNome))
+                {
+                    MessageBox.Show("Esse gênero já foi cadastrado!!!");
+                }
+                else
+                {
+                    gc.CadastrarGenero(g);
 
-                gc.CadastrarGenero(g);
-
-                MessageBox.Show("Cadastrado com sucesso!!!");
-
+                    MessageBox.Show("Cadastrado com sucesso!!!");
+                }
                 boxNomeGenero.Text = string.Empty;
             }
+        }
+
+        private void UserControlCadastrarGenero_Loaded(object sender, RoutedEventArgs e)
+        {
+            boxNomeGenero.Focus();
         }
 
     }
