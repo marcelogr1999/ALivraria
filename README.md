@@ -3,11 +3,13 @@
 Aplicação com foco em sistema de vendas para uma livraria.
 
 Funcionalides:
-*Administrador
+
+.Administrador
 - Cadastrar Livros
 - Cadastrar Gêneros
 - Listar Livros
 - Registrar Venda
 - Listar Vendas
-*Cliente
+
+.Cliente
 - Modo terminal, permitindo apenas visualizar os livros disponíveis.
