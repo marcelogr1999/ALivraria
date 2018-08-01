@@ -1,8 +1,8 @@
 # ProjetoCSharp
 
-Aplicação com foco em sistema de vendas para uma livraria.
+Aplicação com foco em sistema de vendas para uma livraria em C#/WPF
 
-Funcionalides:
+FUNCIONALIDADES:
 
 .Geral
 - Login
